@@ -6,14 +6,15 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2021/12/07 15:45:39 by asaboure         ###   ########.fr        #
+#    Updated: 2021/12/07 16:09:41 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Megaphone
+NAME	= Phonebook
 
-SRCS	=	megaphone.cpp
-
+SRCS	=	main.cpp															\
+			Contact.cpp															\
+			PhoneBook.cpp
 BONUSSRCS	=
 
 #OBJS	= ${SRCS:.c=.o}
@@ -28,7 +29,7 @@ LIBS	=
 
 RM		= rm -f
 
-${NAME}:
+${NAME}: ${SRCS}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS} ${LIBS}
 
 .c.o:
