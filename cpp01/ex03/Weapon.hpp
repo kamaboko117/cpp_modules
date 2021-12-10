@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 14:56:44 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/10 14:02:09 by asaboure         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:08:34 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Weapon
 private:
 	std::string	_type = "weapon";
 public:
-	Weapon();
+	Weapon(std::string type);
 	~Weapon();
 
 	const std::string	&getType();

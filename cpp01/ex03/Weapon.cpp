@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 14:57:40 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/10 14:02:58 by asaboure         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:31:15 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	Weapon::setType(std::string type){
 	this->_type = type;
 }
 
-Weapon::Weapon()
+Weapon::Weapon(std::string type) : _type(type)
 {
 }
 

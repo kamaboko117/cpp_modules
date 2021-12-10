@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:03:07 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/10 14:00:35 by asaboure         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:17:57 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	~HumanB();
 
 	void	attack();
-	void	equipWeapon(Weapon *weapon);
+	void	setWeapon(Weapon &weapon);
 };
 
 #endif

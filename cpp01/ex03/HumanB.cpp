@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:10:49 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/10 14:20:37 by asaboure         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:18:01 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	HumanB::attack()
 			<< std::endl;
 }
 
-void	HumanB::equipWeapon(Weapon *weapon){
-	this->_weapon = weapon;
+void	HumanB::setWeapon(Weapon &weapon){
+	this->_weapon = &weapon;
 }
 
 HumanB::HumanB(std::string name) : _name(name)
