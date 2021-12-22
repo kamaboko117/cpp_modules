@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:09:35 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/16 14:50:50 by asaboure         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:01:42 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,17 @@ int	usage()
 	return (0);
 }
 
+void	ft_replace(std::string &str, size_t index, size_t length, std::string s2)
+{
+
+}
+
 void	replace(std::string &str, std::string s1, std::string s2)
 {
 	size_t	index;
 
 	while ((index = str.find(s1)) != std::string::npos) 
-		str.replace(index, s2.length(), s2);
+		ft_replace(str, index, s2.length(), s2);
 }
 
 int	main(int ac, char **av)
