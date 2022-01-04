@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 16:18:31 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/29 20:24:21 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/01/04 18:17:44 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,19 @@ public:
 	bool	operator<=(Fixed const &rhs) const;
 	bool	operator==(Fixed const &rhs) const;
 	bool	operator!=(Fixed const &rhs) const;
-	Fixed	&operator+(Fixed const &rhs);
-	Fixed	&operator-(Fixed const &rhs);
-	Fixed	&operator*(Fixed const &rhs);
-	Fixed	&operator/(Fixed const &rhs);
-	Fixed	&operator++(int);
-	Fixed	&operator++();
-	Fixed	&operator--(int);
-	Fixed	&operator--();
+	Fixed	operator+(Fixed const &rhs) const;
+	Fixed	operator-(Fixed const &rhs) const;
+	Fixed	operator*(Fixed const &rhs) const;
+	Fixed	operator/(Fixed const &rhs) const;
+	Fixed	operator++(int);
+	Fixed	operator++();
+	Fixed	operator--(int);
+	Fixed	operator--();
 
 	float			toFloat(void) const;
 	int				toInt(void) const;
-	static Fixed	min(Fixed &f1, Fixed &f2);
-	static Fixed	max(Fixed &f1, Fixed &f2);
+	static Fixed	&min(Fixed &f1, Fixed &f2);
+	static Fixed	&max(Fixed &f1, Fixed &f2);
 	
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
