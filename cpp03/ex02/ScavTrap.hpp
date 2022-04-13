@@ -6,13 +6,12 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:13:40 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 14:21:28 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/13 14:20:58 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
-# include <string>
 # include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap

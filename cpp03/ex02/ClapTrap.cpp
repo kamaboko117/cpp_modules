@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 20:27:21 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 15:39:15 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:58:57 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,10 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
 
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
-	std::string	name;
-	
-	name = src._name;
-	this->_name = name.append(" Copy");
-	this->_Hitpoints = src._Hitpoints;
-	this->_EnergyPoints = src._EnergyPoints;
-	this->_AttackDmg = src._AttackDmg;
+	this->_name = src._name;
+	this->_Hitpoints = 10;
+	this->_EnergyPoints = 10;
+	this->_AttackDmg = 0;
 	std::cout << "ClapTrap " << this->_name << " has been created" << std::endl;
 }
 
