@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 14:15:19 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 15:46:53 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/13 16:43:00 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FRAG_TRAP_HPP
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
 public:
 	FragTrap(std::string name);										// Canonical

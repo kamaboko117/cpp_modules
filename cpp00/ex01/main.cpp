@@ -6,13 +6,14 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 14:39:10 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/08 13:39:40 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/13 20:02:02 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 static void	title()
 {
@@ -28,27 +29,48 @@ static void	add_contact(PhoneBook *agenda)
 	if (i == 8)
 		i = 0;
 	// get first name
-	std::cout << "Contact's first name:";
-	do
+	do{
+		std::cout << "Contact's first name: ";
 		std::getline(std::cin, entry);
-	while (entry == "");
+		if (std::cin.eof())
+			return ;
+	}while (entry.find_first_not_of(" \t\n\v\f\r") == std::string::npos);
 	agenda->Contact[i].setFirstName(entry);
 
 	// get last name
-	std::cout << "Contact's last name:";
-	std::getline(std::cin, entry);
+	do{
+		std::cout << "Contact's last name: ";
+		std::getline(std::cin, entry);
+		if (std::cin.eof())
+			return ;
+	}while (entry.find_first_not_of(" \t\n\v\f\r") == std::string::npos);
 	agenda->Contact[i].setLastName(entry);
+
 	// get nickname
-	std::cout << "Contact's nickname:";
-	std::getline(std::cin, entry);
+	do{
+		std::cout << "Contact's nickname: ";
+		std::getline(std::cin, entry);
+		if (std::cin.eof())
+			return ;
+	}while (entry.find_first_not_of(" \t\n\v\f\r") == std::string::npos);
 	agenda->Contact[i].setNickname(entry);
+
 	// get phone number
-	std::cout << "Contact's phone number:";
-	std::getline(std::cin, entry);
+	do{
+		std::cout << "Contact's phone number: ";
+		std::getline(std::cin, entry);
+		if (std::cin.eof())
+			return ;
+	}while (entry.find_first_not_of(" \t\n\v\f\r") == std::string::npos);
 	agenda->Contact[i].setPhoneNumber(entry);
+	
 	// get darkest secret
-	std::cout << "Contact's darkest secret:";
-	std::getline(std::cin, entry);
+	do{
+		std::cout << "Contact's darkest secret: ";
+		std::getline(std::cin, entry);
+		if (std::cin.eof())
+			return ;
+	}while (entry.find_first_not_of(" \t\n\v\f\r") == std::string::npos);
 	agenda->Contact[i].setDarkestSecret(entry);
 	std::cout << "Contact successfully added" << std::endl;
 	i++;
@@ -104,8 +126,10 @@ static void	search_contact(PhoneBook agenda)
 	std::string			entry;
 	
 	display_contacts(agenda);
-	std::cout << "Select a contact index:";
+	std::cout << "Select a contact index: ";
 	std::getline(std::cin, entry);
+	if (std::cin.eof())
+		return ;
 	if (!is_number(entry) || std::atoi(entry.c_str()) >= 8 || std::atoi(entry.c_str()) < 0)
 		std::cout << "wrong input" << std::endl;
 	else

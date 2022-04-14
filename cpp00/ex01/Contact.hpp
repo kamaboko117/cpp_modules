@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 13:30:31 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/07 17:21:59 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/13 19:47:56 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 class Contact
 {
 private:
-	std::string	_first_name = "";
-	std::string	_last_name = "";
-	std::string	_nickname = "";
-	std::string	_phone_number = "";
-	std::string	_darkest_secret = "";
+	std::string	_first_name;
+	std::string	_last_name;
+	std::string	_nickname;
+	std::string	_phone_number;
+	std::string	_darkest_secret;
 public:
 	Contact();
 	~Contact();

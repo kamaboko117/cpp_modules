@@ -6,17 +6,16 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/13 19:17:20 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/14 13:06:25 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Megaphone
+NAME	=	Animals
 
-SRCS	=	megaphone.cpp
-
-BONUSSRCS	=
-
-#OBJS	= ${SRCS:.c=.o}
+SRCS	=	main.cpp															\
+			Animal.cpp															\
+			Dog.cpp\
+			Cat.cpp\
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
@@ -26,7 +25,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
-${NAME}:	${SRCS}
+${NAME}: ${SRCS}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS}
 
 .c.o:
@@ -37,7 +36,7 @@ all:	${NAME}
 bonus:
 
 clean:
-	 ${RM} ${OBJS} ${BONUSOBJS}
+	 ${RM} ${OBJS}
 
 fclean:	clean
 	${RM} ${NAME}

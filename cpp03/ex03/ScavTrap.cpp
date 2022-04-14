@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:24:17 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 14:09:29 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/13 16:58:09 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap " << this->_name << " has been destroyed" << std::endl;
 }
 
-void		ScavTrap::attack(std::string &target)
+void		ScavTrap::attack(std::string const &target)
 {
 	std::cout << "ScavTrap "<< this->_name << " attacked " << target << ", causing " 
 		<< this->_AttackDmg << " points of damage!" << std::endl;
