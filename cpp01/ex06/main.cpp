@@ -6,16 +6,16 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:09:35 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/28 12:07:17 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:02:49 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
 int	usage()
 {
-	std::cout << "usage: ./karenFilter <log level>" << std::endl;
+	std::cout << "usage: ./HarlFilter <log level>" << std::endl;
 	return (0);
 }
 
@@ -33,7 +33,7 @@ Options	resolveOption(std::string input)
 
 int	main(int ac, char **av)
 {
-	Karen	Karen;
+	Harl	Harl;
 
 	if (ac != 2)
 		return	(usage());
@@ -42,16 +42,16 @@ int	main(int ac, char **av)
 	{
 	case DEBUG:
 		std::cout << "[ DEBUG ]" << std::endl;
-		Karen.complain("DEBUG");
+		Harl.complain("DEBUG");
 	case INFO:
 		std::cout << "[ INFO ]" << std::endl;
-		Karen.complain("INFO");
+		Harl.complain("INFO");
 	case WARNING:
 		std::cout << "[ WARNING ]" << std::endl;
-		Karen.complain("WARNING");
+		Harl.complain("WARNING");
 	case ERROR:
 		std::cout << "[ ERROR ]" << std::endl;
-		Karen.complain("ERROR");
+		Harl.complain("ERROR");
 		break;
 	default:
 		std::cout << "[ Probably complaining about insignificant problems ]"

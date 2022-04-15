@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:35:23 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 15:42:04 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/14 19:20:13 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,14 @@ Bureaucrat  &Bureaucrat::operator=(Bureaucrat const &src){
 
 //ETC
 
+std::string	Bureaucrat::getName(){
+	return this->_name;
+}
+
+int			Bureaucrat::getGrade(){
+	return this->_grade;
+}
+
+void		Bureaucrat::upgrade(){
+	this->_grade--;
+}

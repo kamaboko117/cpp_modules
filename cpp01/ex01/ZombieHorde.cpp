@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:57:22 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/09 14:21:15 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/15 11:26:27 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ Zombie	*zombieHorde(int N, std::string name)
 {
 	Zombie				*horde = new Zombie[N];
 	std::stringstream	sstm;
-	
-	(void)name;
+
 	for (int i = 0; i < N; i++)
 	{
 		sstm << name << i;

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:09:35 by asaboure          #+#    #+#             */
-/*   Updated: 2021/12/16 15:01:42 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/15 14:00:33 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,34 @@ int	usage()
 	return (0);
 }
 
-void	ft_replace(std::string &str, size_t index, size_t length, std::string s2)
+void	ft_replace(std::string &str, size_t index, std::string s1, std::string s2)
 {
-
+	str.erase(index, s1.length());
+	str.insert(index, s2);
 }
 
 void	replace(std::string &str, std::string s1, std::string s2)
 {
 	size_t	index;
+	size_t	offset;
 
-	while ((index = str.find(s1)) != std::string::npos) 
-		ft_replace(str, index, s2.length(), s2);
+	offset = 0;
+	while ((index = str.find(s1, offset)) != std::string::npos)
+	{
+		ft_replace(str, index, s1, s2);
+		offset = index + s2.length();
+	}
 }
 
 int	main(int ac, char **av)
 {
 
-	if (ac != 4)
+	if (ac != 4 || av[2][0] == 0)
 		return (usage());
 	std::string			filename(av[1]);
 	std::string			replacename = filename;
-	std::ofstream		out(replacename.append(".replace"));
-	std::ifstream		in(filename);
+	std::ofstream		out(replacename.append(".replace").c_str());
+	std::ifstream		in(filename.c_str());
 	std::stringstream	bufstream;
 	std::string			s1(av[2]);
 	std::string			s2(av[3]);

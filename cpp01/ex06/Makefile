@@ -6,14 +6,14 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2021/12/29 14:49:20 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/15 15:04:59 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	karenFiltrer
+NAME	=	HarlFilter
 
 SRCS	=	main.cpp															\
-			Karen.cpp								
+			Harl.cpp								
 
 BONUSSRCS	=
 

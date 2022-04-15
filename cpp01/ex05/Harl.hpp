@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 # include <string>
 
-class Karen
+class Harl
 {
 private:
-	enum	levels{DEBUG, INFO, WARNING, ERROR};
 	void	debug(void);
 	void	info(void);
 	void	warning(void);
 	void	error(void);
 public:
-	Karen();
-	~Karen();
+	Harl();
+	~Harl();
 
 	void	complain(std::string level);
 };
