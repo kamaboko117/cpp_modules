@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2021/12/29 16:33:41 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/16 14:50:28 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ BONUSSRCS	=
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
-CC		= clang++
+CC		= c++
 
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 

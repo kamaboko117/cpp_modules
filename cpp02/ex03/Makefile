@@ -6,15 +6,16 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/16 14:50:20 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/19 15:49:49 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Fixed
+NAME	=	bsp
 
 SRCS	=	main.cpp															\
-			Fixed.cpp
-											
+			Fixed.cpp\
+			Point.cpp\
+			bsp.cpp					
 
 BONUSSRCS	=
 
