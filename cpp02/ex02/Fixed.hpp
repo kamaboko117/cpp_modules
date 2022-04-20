@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 16:18:31 by asaboure          #+#    #+#             */
-/*   Updated: 2022/01/04 18:17:44 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/20 12:40:06 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ public:
 	float			toFloat(void) const;
 	int				toInt(void) const;
 	static Fixed	&min(Fixed &f1, Fixed &f2);
+	static const Fixed	&min(Fixed const &f1, Fixed const &f2);
 	static Fixed	&max(Fixed &f1, Fixed &f2);
+	static const Fixed	&max(Fixed const &f1, Fixed const &f2);
 	
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);

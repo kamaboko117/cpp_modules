@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 16:26:53 by asaboure          #+#    #+#             */
-/*   Updated: 2022/01/04 18:33:49 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/20 12:40:42 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,8 +180,20 @@ Fixed	&Fixed::min(Fixed &f1, Fixed &f2)
 	return (f1);
 }
 
+Fixed	const &Fixed::min(Fixed const &f1, Fixed const &f2){
+	if (f2 < f1)
+		return (f2);
+	return (f1);
+}
+
 Fixed	&Fixed::max(Fixed &f1, Fixed &f2)
 {
+	if (f2 > f1)
+		return (f2);
+	return (f1);
+}
+
+Fixed	const &Fixed::max(Fixed const &f1, Fixed const &f2){
 	if (f2 > f1)
 		return (f2);
 	return (f1);
