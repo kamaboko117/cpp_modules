@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 14:15:19 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 15:46:53 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 13:27:12 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 
 	FragTrap	&operator=(FragTrap const &rhs);					// Canonical
 
-	void	attack(std::string &target);
+	void	attack(const std::string &target);
 	void 	highFivesGuys();
 };
 

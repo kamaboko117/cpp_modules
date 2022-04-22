@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:13:40 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 14:21:28 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 13:25:09 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 
 	ScavTrap	&operator=(ScavTrap const &rhs);					// Canonical
 
-	void	attack(std::string &target);
+	void	attack(const std::string &target);
 	void 	guardGate();
 };
 

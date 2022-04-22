@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 20:43:58 by asaboure          #+#    #+#             */
-/*   Updated: 2022/01/04 20:54:05 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 12:13:30 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int	main()
 	ClapTrap	c(a);
 	ClapTrap	d = c;
 	std::string	Adventurer = "Steve";
+	
 	a.attack(Adventurer);
 	a.takeDamage(4);
+	a.beRepaired(2);
+	a.setEP(-5);
+	a.attack(Adventurer);
 	a.beRepaired(2);
 }

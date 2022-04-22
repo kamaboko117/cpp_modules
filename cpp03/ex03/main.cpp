@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 20:43:58 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/13 17:19:58 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 13:33:41 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int	main()
 {
 	ClapTrap	a("Josh");
-	DiamondTrap	diam("Jack");
+	DiamondTrap	diam("Diamond");
 	std::string Adventurer("Steve");
 
 	a.attack(Adventurer);
@@ -29,4 +29,5 @@ int	main()
 	diam.beRepaired(2);
 	diam.whoAmI();
 	diam.highFivesGuys();
+	diam.guardGate();
 }
