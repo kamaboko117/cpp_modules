@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/22 11:07:40 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/22 15:12:07 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME	=	ClapTrap
 SRCS	=	main.cpp															\
 			ClapTrap.cpp
 											
+HPP		=	ClapTrap.hpp
 
 BONUSSRCS	=
 
@@ -30,7 +31,7 @@ LIBS	=
 
 RM		= rm -f
 
-${NAME}: ${SRCS}
+${NAME}: ${SRCS} ${HPP}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS} ${LIBS}
 
 .c.o:

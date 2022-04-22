@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 20:27:21 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/22 13:20:38 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 15:05:38 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void		ClapTrap::beRepaired(unsigned int amount)
 		this->_Hitpoints += amount;
 		if (this->_Hitpoints > this->_HitpointsMax)
 			this->_Hitpoints = this->_HitpointsMax;
+		this->_EnergyPoints--;
 		std::cout << this->_name << " has been repaired for \033[1;31m" << amount
 			<< "\033[0m Hitpoints! (HP: \033[1;31m" << this->_Hitpoints
 			<< "\033[0m)" << std::endl;
