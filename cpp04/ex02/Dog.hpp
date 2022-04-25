@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:57:31 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 14:32:13 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:46:45 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ public:
 	Dog(Dog const &src);										//Canonical
 	~Dog();														//Canonical
 
-	Dog	&operator=(Dog const &rhs);						    	//Canonical
+	Dog				&operator=(Dog const &rhs);				   	//Canonical
+	virtual Animal	&operator=(Animal const &src);
 	virtual void	makeSound();
+	Brain			*getBrain() const;
 };
 
 #endif

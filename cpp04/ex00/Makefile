@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/14 13:06:25 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/22 17:12:50 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,14 @@ SRCS	=	main.cpp															\
 			Animal.cpp															\
 			Dog.cpp\
 			Cat.cpp\
+			WrongAnimal.cpp\
+			WrongCat.cpp
+
+HPP		=	Animal.hpp\
+			Dog.hpp\
+			Cat.hpp\
+			WrongAnimal.hpp\
+			WrongCat.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
@@ -25,7 +33,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
-${NAME}: ${SRCS}
+${NAME}: ${SRCS} ${HPP}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS}
 
 .c.o:

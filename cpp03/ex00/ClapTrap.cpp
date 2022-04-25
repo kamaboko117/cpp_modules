@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 20:27:21 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/22 15:05:38 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/25 13:39:26 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,9 @@ void		ClapTrap::beRepaired(unsigned int amount)
 			<< "\033[0m Hitpoints! (HP: \033[1;31m" << this->_Hitpoints
 			<< "\033[0m)" << std::endl;
 	}
-	std::cout << this->_name << " tried to repair itself but is too exhausted..."
-		<< std::endl;
+	else
+		std::cout << this->_name << " tried to repair itself but is too exhausted..."
+			<< std::endl;
 }
 
 void	ClapTrap::setEP(int ep){

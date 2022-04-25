@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/14 14:34:09 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/22 17:00:49 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,11 @@ SRCS	=	main.cpp															\
 			Cat.cpp\
 			Brain.cpp\
 
+HPP		=	Animal.hpp\
+			Dog.hpp\
+			Cat.hpp\
+			Brain.hpp
+
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
 CC		= clang++
@@ -26,7 +31,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
-${NAME}: ${SRCS}
+${NAME}: ${SRCS} ${HPP}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS}
 
 .c.o:

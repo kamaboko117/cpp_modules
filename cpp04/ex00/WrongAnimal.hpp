@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:53:52 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:55:42 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/22 17:23:41 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ public:
 
 	WrongAnimal	&operator=(WrongAnimal const &rhs);					//Canonical
 
-	std::string getType();
-	void	makeSound();
+	std::string getType() const;
+	void	makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:25:18 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:27:40 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:51:11 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Animal  &Animal::operator=(Animal const &src){
 
 //ETC
 
-std::string Animal::getType(){
+std::string Animal::getType() const{
     return (this->type);
 }
 
