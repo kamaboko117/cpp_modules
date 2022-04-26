@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:02:33 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:34:19 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:21:03 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ Dog  &Dog::operator=(Dog const &src){
     return (*this);
 }
 
-void    Dog::makeSound(){
+void    Dog::makeSound() const{
     std::cout << "Woof woof" << std::endl;
 }

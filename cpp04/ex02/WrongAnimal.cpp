@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:55:57 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:57:04 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:24:49 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ WrongAnimal  &WrongAnimal::operator=(WrongAnimal const &src){
 
 //ETC
 
-std::string WrongAnimal::getType(){
+std::string WrongAnimal::getType() const{
     return (this->type);
 }
 
-void    WrongAnimal::makeSound(){
+void    WrongAnimal::makeSound() const{
     std::cout << "*Demon noises*" << std::endl;
 }

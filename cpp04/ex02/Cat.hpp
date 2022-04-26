@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:59:50 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/25 17:45:30 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:24:14 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Cat				&operator=(Cat const &rhs);					//Canonical
 	virtual Animal	&operator=(Animal const &rhs);
 	
-	virtual void	makeSound();
+	virtual void	makeSound() const;
 	Brain			*getBrain() const;
 };
 

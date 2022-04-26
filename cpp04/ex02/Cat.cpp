@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:04:48 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/25 17:49:59 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:24:08 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Animal	&Cat::operator=(Animal const &src){
     return (*this);
 }
 
-void    Cat::makeSound(){
+void    Cat::makeSound() const{
     std::cout << "Meow meow" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 13:58:05 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:59:22 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:25:06 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	~WrongCat();													//Canonical
 
 	WrongCat	&operator=(WrongCat const &rhs);					//Canonical
-	void	makeSound();
+	void	makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:59:50 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 13:54:08 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:20:41 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	~Cat();														//Canonical
 
 	Cat	&operator=(Cat const &rhs);						    	//Canonical
-	virtual void	makeSound();
+	virtual void	makeSound() const;
 };
 
 #endif

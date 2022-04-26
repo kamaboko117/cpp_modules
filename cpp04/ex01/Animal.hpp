@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:18:24 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/25 16:53:42 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:21:52 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 
 	std::string 	getType() const;
 	virtual Brain	*getBrain() const = 0;
-	virtual void	makeSound();
+	virtual void	makeSound() const;
 };
 
 #endif

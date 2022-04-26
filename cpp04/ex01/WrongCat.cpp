@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:00:10 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/25 13:01:00 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:23:24 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ WrongCat  &WrongCat::operator=(WrongCat const &src){
     return (*this);
 }
 
-void    WrongCat::makeSound(){
+void    WrongCat::makeSound() const{
     std::cout << "Meow meow" << std::endl;
 }
