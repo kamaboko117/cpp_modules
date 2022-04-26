@@ -6,13 +6,16 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/14 15:26:17 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/26 11:52:21 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	
+NAME	=	Bureaucrat
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp\
+			Bureaucrat.cpp
+
+HPP		=	Bureaucrat.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
@@ -22,7 +25,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
-${NAME}: ${SRCS}
+${NAME}: ${SRCS} ${HPP}
 	${CC} ${CFLAGS} -o ${NAME} ${SRCS}
 
 .c.o:
