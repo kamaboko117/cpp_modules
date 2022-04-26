@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:27:47 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:24:07 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:40:19 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ public:
 	int			getGrade() const;
 	void		upgrade();
 	void		downgrade();
-	void		signForm(Form);
+	void		signForm(Form&);
 };
 
 std::ostream	&operator<<(std::ostream &o, Bureaucrat const &i);

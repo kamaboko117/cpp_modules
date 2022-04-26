@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:35:23 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:01:08 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:46:52 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade){
 	if (grade < 1)
-		throw Bureaucrat::GradeTooLowException();
-	if (grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (grade > 150)
+		throw Bureaucrat::GradeTooLowException();
     std::cout << "Bureaucrat constructor called" << std::endl;
 }
 
@@ -58,21 +58,21 @@ int			Bureaucrat::getGrade() const{
 void		Bureaucrat::upgrade(){
 	this->_grade--;
 	if (this->_grade < 1)
-		throw GradeTooLowException();
+		throw GradeTooHighException();
 }
 
 void		Bureaucrat::downgrade(){
 	this->_grade++;
 	if (this->_grade > 150)
-		throw GradeTooHighException();
+		throw GradeTooLowException();
 }
 
 //EXCEPTIONS
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw(){
-	return ("Bureaucrat: Grade must be lower than 151");
+	return ("Bureaucrat: Grade must be lower than 0");
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw(){
-	return ("Bureaucrat: Grade must be higher than 0");
+	return ("Bureaucrat: Grade must be higher than 151");
 }

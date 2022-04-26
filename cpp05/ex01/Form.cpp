@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:26:41 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:35:53 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:06:06 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 Form::Form(std::string name, int sign, int exec) :	_name(name), _signGrade(sign),
 													_execGrade(exec){
 	if (sign < 1 || exec < 1)
-		throw Form::GradeTooLowException();
-	if (sign > 150 || exec > 150)
 		throw Form::GradeTooHighException();
+	if (sign > 150 || exec > 150)
+		throw Form::GradeTooLowException();
 	this->_signed = false;
     std::cout << "Form constructor called" << std::endl;
 }
@@ -67,7 +67,7 @@ bool		Form::isSigned() const{
 	return (this->_signed);
 }
 
-void	Form::beSigned(const Bureaucrat b){
+void	Form::beSigned(const Bureaucrat &b){
 	if (b.getGrade() > this->_signGrade)
 		throw GradeTooLowException();
 	else if (this->isSigned())
@@ -87,5 +87,5 @@ const char	*Form::GradeTooLowException::what() const throw(){
 }
 
 const char	*Form::FormAlreadySignedException::what() const throw(){
-	return ("Form: Already signed");
+	return ("Form is already signed");
 }
