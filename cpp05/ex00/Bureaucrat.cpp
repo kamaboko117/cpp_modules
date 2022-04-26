@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:35:23 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 14:03:07 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:01:08 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ void		Bureaucrat::downgrade(){
 //EXCEPTIONS
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw(){
-	return ("Grade must be lower than 151");
+	return ("Bureaucrat: Grade must be lower than 151");
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw(){
-	return ("Grade must be higher than 0");
+	return ("Bureaucrat: Grade must be higher than 0");
 }

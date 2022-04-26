@@ -6,13 +6,15 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:07:20 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 14:31:59 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:31:03 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -41,13 +43,18 @@ public:
 	public:
 		virtual const char	*what() const throw();
 	};
+	class FormAlreadySignedException : public std::exception
+	{
+	public:
+		virtual const char	*what() const throw();
+	};
 
 	std::string	getName() const;
 	bool		isSigned() const;
 	int			getSignGrade() const;
 	int			getExecGrade() const;
 
-	void	beSigned(Bureaucrat);
+	void	beSigned(const Bureaucrat);
 };
 
 std::ostream	&operator<<(std::ostream &o, Form const &i);

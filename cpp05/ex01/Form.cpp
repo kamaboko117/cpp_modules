@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:26:41 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 14:56:59 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:35:53 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ Form  &Form::operator=(Form const &src){
 
 std::ostream	&operator<<(std::ostream &o, Form const &i)
 {
-	o << i.getName() << ": Rank required to sign:" << i.getSignGrade()
+	o << i.getName() << ": Rank required to sign: " << i.getSignGrade()
 		<< "; Rank required to execute: " << i.getExecGrade()
-		<< (i.isSigned() ? "; Signed" : "; Unisgned");
+		<< (i.isSigned() ? "; Signed" : "; Unsigned");
 	return (o);
 }
 
@@ -67,12 +67,25 @@ bool		Form::isSigned() const{
 	return (this->_signed);
 }
 
+void	Form::beSigned(const Bureaucrat b){
+	if (b.getGrade() > this->_signGrade)
+		throw GradeTooLowException();
+	else if (this->isSigned())
+		throw FormAlreadySignedException();
+	else
+		this->_signed = true;
+}
+
 //EXCEPTIONS
 
 const char	*Form::GradeTooHighException::what() const throw(){
-	return ("Grade must be lower than 151");
+	return ("Form: Grade too high");
 }
 
 const char	*Form::GradeTooLowException::what() const throw(){
-	return ("Grade must be higher than 0");
+	return ("Form: Grade too low");
+}
+
+const char	*Form::FormAlreadySignedException::what() const throw(){
+	return ("Form: Already signed");
 }
