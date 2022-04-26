@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:35:23 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/14 19:20:13 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/26 12:05:47 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 //CANON
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade){
+	if (grade < 1)
+		throw Bureaucrat::GradeTooLowException();
+	if (grade > 150)
+		throw Bureaucrat::GradeTooHighException();
     std::cout << "Bureaucrat constructor called" << std::endl;
 }
 
