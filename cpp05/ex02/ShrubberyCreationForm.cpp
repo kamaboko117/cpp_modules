@@ -6,12 +6,14 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:33:38 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 17:55:47 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:17:20 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include "tree.hpp"
 #include <iostream>
+#include <fstream>
 
 //CANON
 
@@ -36,7 +38,9 @@ ShrubberyCreationForm  &ShrubberyCreationForm::operator=(ShrubberyCreationForm c
 
 //ETC
 
-void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const{
-	std::cout << "plouf" << std::endl;
-	(void)executor;
+void	ShrubberyCreationForm::doExec() const{
+	std::string		filename(_target);
+	std::ofstream	file(filename.append("_shrubbery").c_str());
+
+	file << TREE;
 }

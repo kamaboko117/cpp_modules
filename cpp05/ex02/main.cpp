@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 11:53:28 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/27 11:35:15 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:02:35 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(){
 
 		std::cout << form << std::endl;
 		a.executeForm(form);
+		a.signForm(form);
 		b.executeForm(form);
 	}
 	catch(const std::exception &e){

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:26:41 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 16:06:06 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:01:45 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,16 @@ bool		Form::isSigned() const{
 	return (this->_signed);
 }
 
+void		Form::execute(Bureaucrat const &executor) const{
+	if (executor.getGrade() > this->_execGrade)
+		throw GradeTooLowException();
+	else if (!this->isSigned())
+		throw FormNotSignedException();
+	else
+		this->doExec();
+}
+
+
 void	Form::beSigned(const Bureaucrat &b){
 	if (b.getGrade() > this->_signGrade)
 		throw GradeTooLowException();
@@ -88,4 +98,8 @@ const char	*Form::GradeTooLowException::what() const throw(){
 
 const char	*Form::FormAlreadySignedException::what() const throw(){
 	return ("Form is already signed");
+}
+
+const char	*Form::FormNotSignedException::what() const throw(){
+	return ("Form isn't signed");
 }

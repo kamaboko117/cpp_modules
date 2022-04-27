@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:07:20 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 17:30:23 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:06:33 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ private:
 	bool				_signed;
 	int const			_signGrade;
 	int const			_execGrade;
-	
+	virtual void		doExec() const = 0;
 public:
 	Form(std::string name, int, int);
 	Form(Form const &src);											//Canonical
@@ -48,14 +48,19 @@ public:
 	public:
 		virtual const char	*what() const throw();
 	};
+	class FormNotSignedException : public std::exception
+	{
+	public:
+		virtual const char	*what() const throw();
+	};
 
 	std::string	getName() const;
 	bool		isSigned() const;
 	int			getSignGrade() const;
 	int			getExecGrade() const;
 
-	void			beSigned(const Bureaucrat&);
-	virtual void	execute(Bureaucrat const & executor) const = 0;
+	void			beSigned(const Bureaucrat&);	
+	void			execute(Bureaucrat const &executor) const;
 };
 
 std::ostream	&operator<<(std::ostream &o, Form const &i);
