@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:35:23 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:46:52 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:29:46 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,17 @@ int			Bureaucrat::getGrade() const{
 }
 
 void		Bureaucrat::upgrade(){
-	this->_grade--;
-	if (this->_grade < 1)
+	if (this->_grade == 1)
 		throw GradeTooHighException();
+	else
+		this->_grade--;
 }
 
 void		Bureaucrat::downgrade(){
-	this->_grade++;
-	if (this->_grade > 150)
+	if (this->_grade == 150)
 		throw GradeTooLowException();
+	else
+		this->_grade++;
 }
 
 //EXCEPTIONS

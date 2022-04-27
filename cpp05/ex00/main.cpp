@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 11:53:28 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:08:08 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:59:59 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ int	main(){
 	catch(const std::exception &e){
 		std::cout << e.what() << std::endl;
 	}
+	
 	try{
 		Bureaucrat	a("Eva", 151);
 	}
 	catch(const std::exception &e){
 		std::cout << e.what() << std::endl;
-
+	}
+	
 	try{
 		Bureaucrat	a("Chloe", 1);
 		a.upgrade();

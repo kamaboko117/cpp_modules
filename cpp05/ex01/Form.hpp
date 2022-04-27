@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 14:07:20 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/26 15:39:45 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:35:12 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ private:
 public:
 	Form(std::string name, int, int);
 	Form(Form const &src);											//Canonical
-	~Form();														//Canonical
+	virtual ~Form();												//Canonical
 
 	Form	&operator=(Form const &rhs);							//Canonical
 

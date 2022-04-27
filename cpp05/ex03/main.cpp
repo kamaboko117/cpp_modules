@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 11:53:28 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/27 14:52:14 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 15:02:56 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(){
 		a.signForm(*form);
 		a.executeForm(*form);
 		delete form;
-		form = intern.makeForm("incorrect form", "lol");
+		// form = intern.makeForm("incorrect form", "lol");
 		std::cout << std::endl;
 	}
 	catch(const std::exception &e){

@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 13:39:50 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/27 14:29:41 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:35:05 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include <iostream>
 
 Intern::Intern(){}
 
@@ -56,11 +57,6 @@ Form	*Intern::makeForm(std::string name, std::string target) const{
 		if (name == FormTypes[i])
 			return ((this->*selectedForm)(target));
 	}
-	throw FormNotFoundException();
-}
-
-//EXCEPTIONS
-
-const char*	Intern::FormNotFoundException::what() const throw() {
-	return "Intern: Form type doesn't exist";
+	std::cout << "Intern: Form type doesn't exist" << std::endl;
+	return (NULL);
 }
