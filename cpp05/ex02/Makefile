@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/26 17:31:30 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/27 13:17:48 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,15 @@ NAME	=	Bureaucrat
 SRCS	=	main.cpp\
 			Bureaucrat.cpp\
 			Form.cpp\
-			ShrubberyCreationForm.cpp
+			ShrubberyCreationForm.cpp\
+			RobotomyRequestForm.cpp\
+			PresidentialPardonForm.cpp
 
 HPP		=	Bureaucrat.hpp\
 			Form.hpp\
-			ShrubberyCreationForm.hpp
+			ShrubberyCreationForm.hpp\
+			RobotomyRequestForm.hpp\
+			PresidentialPardonForm.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 

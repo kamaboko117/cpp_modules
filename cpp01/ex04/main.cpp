@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:09:35 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/15 14:00:33 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:39:43 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ int	main(int ac, char **av)
 	std::string			s2(av[3]);
 	
 	if (out.is_open() && in.is_open())
-	{
-		
+	{	
 		bufstream << in.rdbuf();
 		std::string buf = bufstream.str();
 		replace(buf, s1, s2);

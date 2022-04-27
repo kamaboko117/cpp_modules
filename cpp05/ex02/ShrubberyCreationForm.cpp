@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 17:33:38 by asaboure          #+#    #+#             */
-/*   Updated: 2022/04/27 12:17:20 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:23:48 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void	ShrubberyCreationForm::doExec() const{
 	std::string		filename(_target);
 	std::ofstream	file(filename.append("_shrubbery").c_str());
 
-	file << TREE;
+	if (file.is_open())
+		file << TREE;
 }
