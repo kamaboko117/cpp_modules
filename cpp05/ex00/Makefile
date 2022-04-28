@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/26 11:52:21 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/28 12:30:13 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ HPP		=	Bureaucrat.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
-CC		= clang++
+CC		= c++
 
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
