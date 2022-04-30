@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/22 17:01:45 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/28 17:08:37 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ HPP		=	Animal.hpp\
 			
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
-CC		= clang++
+CC		= c++
 
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 

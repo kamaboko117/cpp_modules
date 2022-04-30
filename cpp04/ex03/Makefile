@@ -6,23 +6,18 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/28 17:08:13 by asaboure         ###   ########.fr        #
+#    Updated: 2022/04/28 17:10:46 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Animals
+NAME	=	Materia
 
 SRCS	=	main.cpp															\
-			Animal.cpp															\
-			Dog.cpp\
-			Cat.cpp\
-			Brain.cpp\
+			
 
-HPP		=	Animal.hpp\
-			Dog.hpp\
-			Cat.hpp\
-			Brain.hpp
-
+HPP		=	
+			
+			
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
 CC		= c++
