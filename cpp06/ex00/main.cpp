@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 17:53:38 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/04 14:10:18 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/05/04 17:30:56 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 #include <sstream>
 #include "convert.hpp"
 
-int		ft_isalnum(int c)
+bool	ft_isprint(int c)
 {
-	if ((c >= 'a' && c <= 'z') ||
-		(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	if (c >= 32 && c <= 126)
+		return (true);
+	return (false);
 }
 
 int	convertFromChar(char value){
@@ -38,7 +37,7 @@ int	convertFromChar(char value){
 int	convertFromInt(double value){
 	std::stringstream	tmp;
 
-	if (ft_isalnum(static_cast<int>(value)))
+	if (ft_isprint(static_cast<int>(value)))
 		std::cout << "char: " << static_cast<char>(value) << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
@@ -87,7 +86,7 @@ int	getType(std::string input){
 	double	value;
 	char	*pEnd;
 
-	if (input.length() == 1 && isalpha(input[0]))
+	if (input.length() == 1 && ft_isprint(input[0]) && !isdigit(input[0]))
 		return (convertFromChar(input[0]));
 	value = strtod(input.c_str(), &pEnd);
 	if (std::string(pEnd).length() != 0 && !(std::string(pEnd).length() == 1 && pEnd[0] == 'f'))
