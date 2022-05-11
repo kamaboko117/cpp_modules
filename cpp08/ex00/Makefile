@@ -6,7 +6,7 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/05/11 13:03:06 by asaboure         ###   ########.fr        #
+#    Updated: 2022/05/11 12:59:53 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	templates
 
 SRCS	=	main.cpp
 
-HPP		=	Array.hpp
+HPP		=	easyfind.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
