@@ -6,15 +6,16 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/05/11 18:08:13 by asaboure         ###   ########.fr        #
+#    Updated: 2022/05/11 18:08:31 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	easyfind
+NAME	=	Span
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp\
+			Span.cpp
 
-HPP		=	easyfind.hpp
+HPP		=	Span.hpp
 
 BONUSOBJS	= ${BONUSSRCS:.c=.o}
 
