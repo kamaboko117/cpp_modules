@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:41:13 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/11 15:55:24 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:09:15 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Span
 private:
 	Span();																//CANON
 	std::vector<int>	_span;
-	size_t				_len;
+	std::size_t				_len;
 
 public:
 	Span(unsigned int n);
@@ -29,7 +29,9 @@ public:
 	Span	&operator=(Span &rhs);										//CANON
 
 	void	addNumber(int n);
-	int		shortestSpan() const;
+	void	addNumber(std::vector<int>::const_iterator t1,
+				std::vector<int>::const_iterator t2);
+	int		shortestSpan();
 	int		longestSpan() const;
 };
 
