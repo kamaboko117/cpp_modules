@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 15:38:32 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/16 15:39:50 by asaboure         ###   ########.fr       */
+/*   Created: 2022/05/16 15:37:37 by asaboure          #+#    #+#             */
+/*   Updated: 2022/05/16 15:38:08 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
-# include "AMateria.hpp"
+#include "MateriaSource.hpp"
 
-class Ice : public AMateria
-{
-private:
+MateriaSource::MateriaSource(){}
 
-public:
-	Ice();																//CANON
-	Ice(Ice const &src);												//CANON
-	~Ice();																//CANON
-
-	Ice	&operator=(Ice const &rhs);										//CANON
-	
-	virtual AMateria	*clone() const;
-	virtual void		use(ICharacter &target);
-};
-
-#endif
