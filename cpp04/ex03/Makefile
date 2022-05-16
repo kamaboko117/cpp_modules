@@ -6,16 +6,21 @@
 #    By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/21 14:20:20 by asaboure          #+#    #+#              #
-#    Updated: 2022/04/28 17:10:46 by asaboure         ###   ########.fr        #
+#    Updated: 2022/05/16 14:22:33 by asaboure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	Materia
 
 SRCS	=	main.cpp															\
+			AMateria.cpp
 			
-
-HPP		=	
+HPP		=	AMateria.hpp\
+			ICharacter.hpp\
+			Cure.hpp\
+			Ice.hpp\
+			Character.hpp\
+			IMateriaSource.hpp
 			
 			
 BONUSOBJS	= ${BONUSSRCS:.c=.o}

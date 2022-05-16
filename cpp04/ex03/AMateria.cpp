@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/28 17:11:09 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/16 13:52:11 by asaboure         ###   ########.fr       */
+/*   Created: 2022/05/16 13:49:34 by asaboure          #+#    #+#             */
+/*   Updated: 2022/05/16 14:09:05 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
-# include <string>
-# include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class AMateria
-{
-protected:
-	std::string	_type;
-public:
-	AMateria(std::string const & type);
+AMateria::AMateria(std::string const &type){
+	this->_type = type;
+}
 
-	std::string const	&getType() const; //Returns the materia type
-	virtual AMateria	*clone() const = 0;
-	virtual void		use(ICharacter& target);
-};
-
-#endif
+std::string const	&AMateria::getType() const{
+	return (this->_type);
+}
