@@ -6,13 +6,14 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:42:01 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/16 15:52:18 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/05/18 18:41:19 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 # include "ICharacter.hpp"
+# include "AMateria.hpp"
 
 class Character : public ICharacter
 {
@@ -20,6 +21,7 @@ private:
 	Character();														//CANON
 	
 	std::string	_name;
+	AMateria	*inventory[4];
 public:
 	Character(std::string const &name);
 	Character(Character const &src);									//CANON
