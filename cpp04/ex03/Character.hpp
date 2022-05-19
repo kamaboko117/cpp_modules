@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:42:01 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/18 18:41:19 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/05/19 15:07:38 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ private:
 	
 	std::string	_name;
 	AMateria	*inventory[4];
+	size_t		inventorySize;
 public:
 	Character(std::string const &name);
 	Character(Character const &src);									//CANON

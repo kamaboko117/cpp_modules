@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:30:40 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/16 15:37:09 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/05/19 15:31:51 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 class MateriaSource : public IMateriaSource
 {
 private:
+	AMateria	*inventory[4];
+	size_t		inventorySize;
 	
 public:
 	MateriaSource();													//CANON
