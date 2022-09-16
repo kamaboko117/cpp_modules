@@ -6,7 +6,7 @@
 /*   By: asaboure <asaboure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 17:10:27 by asaboure          #+#    #+#             */
-/*   Updated: 2022/05/19 15:46:49 by asaboure         ###   ########.fr       */
+/*   Updated: 2022/09/16 13:59:47 by asaboure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Ice.hpp"
 #include "Character.hpp"
 #include "MateriaSource.hpp"
+#include <iostream>
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
 	me->equip(tmp);
 	
 	ICharacter* bob = new Character("bob");
+	
 	
 	me->use(0, *bob);
 	me->use(1, *bob);
